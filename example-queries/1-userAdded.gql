@@ -1,0 +1,7 @@
+subscription userAdded {
+  userAdded {
+    id
+    name
+    twitter
+  }
+}

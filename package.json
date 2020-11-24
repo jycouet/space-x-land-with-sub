@@ -1,0 +1,13 @@
+{
+  "name": "space-x-land-with-sub",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "graphql-mesh serve"
+  },
+  "dependencies": {
+    "@graphql-mesh/cli": "^0.11.12",
+    "@graphql-mesh/graphql": "^0.7.10",
+    "graphql": "^15.4.0"
+  }
+}

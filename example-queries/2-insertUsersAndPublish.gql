@@ -1,0 +1,11 @@
+# Write your query or mutation here
+mutation insertUsersAndPublish {
+  insert_users_and_publish(name: "JYC", twitter: "123") {
+    affected_rows
+    returning {
+      id
+      name
+      twitter
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# Write your query or mutation here
+# Insert a new user
 mutation insertUsersAndPublish {
   insert_users_and_publish(name: "JYC", rocket: "codegen") {
     affected_rows

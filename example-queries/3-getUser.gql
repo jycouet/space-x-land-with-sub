@@ -1,3 +1,4 @@
+# get all users from the rocket codegen
 query getCodegenUsers {
   users(where: { rocket: { _eq: "codegen" } }) {
     name

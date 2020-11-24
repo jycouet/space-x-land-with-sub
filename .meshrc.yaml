@@ -3,6 +3,7 @@ sources:
     handler:
       graphql:
         endpoint: https://api.spacex.land/graphql/
+
 additionalTypeDefs: |
   extend type Subscription {
     userAdded: users
@@ -10,6 +11,7 @@ additionalTypeDefs: |
   extend type Mutation {
     insert_users_and_publish(name: String!, rocket: String, twitter: String): users_mutation_response
   }
+
 additionalResolvers:
   - type: Subscription
     field: userAdded

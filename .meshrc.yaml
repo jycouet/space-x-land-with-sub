@@ -20,3 +20,5 @@ additionalResolvers:
 
 serve:
   exampleQuery: example-queries/*.gql
+  cors:
+    origin: '*'

@@ -29,6 +29,8 @@ module.exports = (next) => async (root, args, context, info) => {
 
   // select returned ids
   const ids = result.returning.map((c) => c.id);
+
+  // Query users enforcing fields to return
   const responseUser = await context.spacexGQL.apiQuery.users(
     {
       where: { id: { _in: ids } },

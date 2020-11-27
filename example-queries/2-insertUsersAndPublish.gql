@@ -1,9 +1,8 @@
-# Insert a new user
+# Insert a new user and Publish
 mutation insertUsersAndPublish {
-  insert_users_and_publish(name: "JYC", rocket: "codegen") {
+  insert_users(objects: { name: "JYC", rocket: "codegen" }) {
     affected_rows
     returning {
-      id
       name
       rocket
     }

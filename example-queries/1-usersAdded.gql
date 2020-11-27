@@ -1,0 +1,8 @@
+# subscribe to added users
+subscription usersAdded {
+  usersAdded {
+    id
+    name
+    timestamp
+  }
+}

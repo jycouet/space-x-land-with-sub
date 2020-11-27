@@ -6,17 +6,18 @@ sources:
 
 additionalTypeDefs: |
   extend type Subscription {
-    userAdded: users
+    usersAdded: [users]
   }
-  extend type Mutation {
-    insert_users_and_publish(name: String!, rocket: String, twitter: String): users_mutation_response
-  }
+
+transforms:
+  - resolversComposition:
+      - resolver: 'Mutation.insert_users'
+        composer: ./src/composition/insert_user
 
 additionalResolvers:
   - type: Subscription
-    field: userAdded
-    pubsubTopic: userAdded
-  - ./src/mutation-insert_users_and_publish.js
+    field: usersAdded
+    pubsubTopic: usersAdded
 
 serve:
   exampleQuery: example-queries/*.gql

@@ -1,7 +1,0 @@
-# subscribe to added users
-subscription userAdded {
-  userAdded {
-    id
-    name
-  }
-}
